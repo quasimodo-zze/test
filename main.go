@@ -7,11 +7,11 @@ import (
 
 func main() {
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-	     w.Write([]byte("httpserver v1"))
+	     w.Write([]byte("hello from httpserver v1"))
        })
        http.HandleFunc("/bye", sayBye)
        log.Println("Starting v1 server ...")
-       log.Fatal(http.ListenAndServe(":1210", nil))
+       log.Fatal(http.ListenAndServe(":8080", nil))
  }
 
 func sayBye(w http.ResponseWriter, r *http.Request) {
